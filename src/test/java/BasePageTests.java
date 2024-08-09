@@ -56,16 +56,15 @@ public class BasePageTests extends BasePage {
         login(p.getProperty("email"), p.getProperty("password"));
 
         //Step - Verify passenger info
-        String expectedName = "test test";
         wait.until(driver -> nameField.isDisplayed());
-        String actualName = nameField.getAttribute("value");
-        verifyText("Name",expectedName,actualName);
+        String currentName = nameField.getAttribute("value");
+        verifyText("Name",p.getProperty("name"),currentName);
 
-        String expectedGender = "m";
-        verifyText("Gender",expectedGender,genderField.getAttribute("value"));
+        String gender = genderField.getAttribute("value");
+        verifyText("Gender",p.getProperty("gender"),gender);
 
-        String expectedDate = "01.02.1998";
-        verifyText("Date", expectedDate, dateField.getAttribute("value"));
+        String date = dateField.getAttribute("value");
+        verifyText("Date", p.getProperty("birthYear"), date);
 
         //Todo verify no discount document is selected
 

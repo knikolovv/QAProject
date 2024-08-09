@@ -4,20 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/bg/bdz/bileti/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="LoginPageTest and BasePageTests created.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +57,7 @@
       <recent name="C:\Users\Chris\Desktop\QAProject\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasePageTests.headerButtonsTest">
+  <component name="RunManager" selected="JUnit.BasePageTests.buyingTicketTest">
     <configuration name="BasePageTests.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -121,9 +110,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
         <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
         <item itemvalue="JUnit.LoginPageTests.loginTest" />
-        <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
         <item itemvalue="JUnit.BasePageTests.ticketReservationTest" />
         <item itemvalue="JUnit.BasePageTests.reservationTest" />
       </list>
@@ -143,11 +132,34 @@
       <workItem from="1723117703864" duration="3547000" />
       <workItem from="1723121268114" duration="1132000" />
       <workItem from="1723126092389" duration="13834000" />
-      <workItem from="1723194847615" duration="33390000" />
+      <workItem from="1723194847615" duration="34156000" />
     </task>
+    <task id="LOCAL-00001" summary="LoginPageTest and BasePageTests created.">
+      <created>1723240757795</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1723240757795</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="LoginPageTest and BasePageTests created." />
+    <option name="LAST_COMMIT_MESSAGE" value="LoginPageTest and BasePageTests created." />
   </component>
 </project>

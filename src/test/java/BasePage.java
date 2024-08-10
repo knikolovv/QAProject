@@ -12,7 +12,7 @@ public class BasePage extends BaseTest {
     @FindBy(id = "id-password")
     public WebElement loginPasswordInput;
 
-    @FindBy(xpath = "//div[contains(@class, 'col-md-offset-5') and contains(@class, 'col-md-4')]//button")
+    @FindBy(xpath = "//div[contains(@class, 'col-md-offset-5 col-md-4')]//button")
     public WebElement loginButton;
 
     @FindBy(xpath = "//div[@id='header-controls']//a[@href='/register']")

@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="LoginPageTest and BasePageTests created.">
+    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Updated buyingTicketTest to properly use properties">
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,28 +39,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Chris\Desktop\QAProject\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.BasePageTests.buyingTicketTest">
+  <component name="RunManager" selected="JUnit.LoginPageTests.loginTest">
     <configuration name="BasePageTests.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -110,9 +114,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
-        <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
         <item itemvalue="JUnit.LoginPageTests.loginTest" />
+        <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
+        <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
         <item itemvalue="JUnit.BasePageTests.ticketReservationTest" />
         <item itemvalue="JUnit.BasePageTests.reservationTest" />
       </list>
@@ -132,7 +136,8 @@
       <workItem from="1723117703864" duration="3547000" />
       <workItem from="1723121268114" duration="1132000" />
       <workItem from="1723126092389" duration="13834000" />
-      <workItem from="1723194847615" duration="34156000" />
+      <workItem from="1723194847615" duration="34299000" />
+      <workItem from="1723280389819" duration="7063000" />
     </task>
     <task id="LOCAL-00001" summary="LoginPageTest and BasePageTests created.">
       <created>1723240757795</created>
@@ -141,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723240757795</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updated buyingTicketTest to properly use properties">
+      <created>1723241430630</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1723241430630</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +172,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LoginPageTest and BasePageTests created." />
-    <option name="LAST_COMMIT_MESSAGE" value="LoginPageTest and BasePageTests created." />
+    <MESSAGE value="Updated buyingTicketTest to properly use properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated buyingTicketTest to properly use properties" />
   </component>
 </project>

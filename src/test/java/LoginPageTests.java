@@ -7,7 +7,6 @@ public class LoginPageTests extends BasePage {
         super();
     }
 
-    // Sometimes fails for some reason
     @Test
     public void loginTest() {
 

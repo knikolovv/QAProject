@@ -9,11 +9,11 @@ public class BasePageTests extends BasePage {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
     @Test
-    public void headerButtonsTest() throws InterruptedException {
+    public void headerButtonsTest() {
 
         loginControlsButton.click();
         registerControlsButton.click();
-        // When loading the page it bugs and shows wrong flag with the wrong language, so you have to double click
+        // When loading the page it bugs and shows wrong flag with the wrong language, so you have to double-click
         langControlsButton.click();
         langControlsButton.click();
         logo.click();

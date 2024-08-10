@@ -17,12 +17,14 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Properties;
+import java.util.Random;
 
 public class BaseTest  {
     public static Properties p = new Properties();
     public static WebDriver driver;
     public static WebDriverWait wait;
     public static LocalDateTime date = new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
+    public static Random random = new Random();
 
     @BeforeAll
     public static void setUp() {

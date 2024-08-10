@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Updated buyingTicketTest to properly use properties">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +32,9 @@
         <option name="workspaceImportEnabled" value="true" />
       </MavenImportingSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2kMvsaGRZRWxZc4lkzdEBtHi534" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -61,7 +64,7 @@
       <recent name="C:\Users\Chris\Desktop\QAProject\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginPageTests.loginTest">
+  <component name="RunManager" selected="JUnit.LoginPageTests.changingProfileInfoTest">
     <configuration name="BasePageTests.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -82,21 +85,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasePageTests.reservationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasePageTests" />
-      <option name="METHOD_NAME" value="reservationTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BasePageTests.ticketReservationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasePageTests" />
       <option name="METHOD_NAME" value="ticketReservationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LoginPageTests.changingProfileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QAProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
+      <option name="METHOD_NAME" value="changingProfileInfoTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -114,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginPageTests.loginTest" />
+        <item itemvalue="JUnit.LoginPageTests.changingProfileInfoTest" />
         <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
         <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
+        <item itemvalue="JUnit.LoginPageTests.loginTest" />
         <item itemvalue="JUnit.BasePageTests.ticketReservationTest" />
-        <item itemvalue="JUnit.BasePageTests.reservationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +140,7 @@
       <workItem from="1723121268114" duration="1132000" />
       <workItem from="1723126092389" duration="13834000" />
       <workItem from="1723194847615" duration="34299000" />
-      <workItem from="1723280389819" duration="7063000" />
+      <workItem from="1723280389819" duration="15865000" />
     </task>
     <task id="LOCAL-00001" summary="LoginPageTest and BasePageTests created.">
       <created>1723240757795</created>
@@ -153,7 +156,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723241430630</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest">
+      <created>1723295191990</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1723295191991</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +183,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="LoginPageTest and BasePageTests created." />
     <MESSAGE value="Updated buyingTicketTest to properly use properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated buyingTicketTest to properly use properties" />
+    <MESSAGE value="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest" />
   </component>
 </project>

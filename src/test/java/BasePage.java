@@ -17,6 +17,7 @@ public class BasePage extends BaseTest {
 
     @FindBy(xpath = "//div[@id='header-controls']//a[@href='/register']")
     public WebElement registerControlsButton;
+
     @FindBy(xpath = "//div[@id='header-controls']//a[@href='/profile']")
     public WebElement profileButton;
 
@@ -31,6 +32,7 @@ public class BasePage extends BaseTest {
 
     @FindBy(id = "react-select-2-input")
     public WebElement startStationInput;
+
     @FindBy(className = "css-yk16xz-control")
     public WebElement endStationButton;
 
@@ -52,6 +54,15 @@ public class BasePage extends BaseTest {
 
     @FindBy(xpath = "//div[@class = 'react-datepicker__input-container']//input")
     public WebElement dateField;
+
+    @FindBy(xpath = "//div[@class='col-md-7']//input")
+    public WebElement changePhoneNumberField;
+
+    @FindBy(xpath = "//div[@class='col-xs-4']")
+    public WebElement profileButtonsSection;
+
+    @FindBy(xpath = "//div[@class='col-md-2']//a")
+    public WebElement cancelProfileChangeButton;
 
     public BasePage() {
         PageFactory.initElements(driver, this);

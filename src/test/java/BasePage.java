@@ -44,21 +44,21 @@ public class BasePage extends BaseTest {
 
     @FindBy(xpath = "//div[@class='col-md-2']//button")
     public WebElement searchButton;
-    @FindBy(xpath = "//input[@class = 'form-control passengers-names\n" +
-                    "                        \n" +
-                    "                      ']")
+    @FindBy(xpath = "//input[contains(@class,'form-control passengers-names')]")
     public WebElement nameField;
 
     @FindBy(xpath = "//div[@class = 'col-sm-4']//select")
     public WebElement genderField;
 
-    @FindBy(xpath = "//div[@class = 'react-datepicker__input-container']//input")
+    @FindBy(xpath = "//div[contains(@class,'react-datepicker')]//input")
     public WebElement dateField;
 
     @FindBy(xpath = "//div[@class='col-md-7']//input")
     public WebElement changePhoneNumberField;
+    @FindBy(id = "id_new_birthDate")
+    public WebElement changeBirthDateField;
 
-    @FindBy(xpath = "//div[@class='col-xs-4']")
+    @FindBy(className = "col-xs-4")
     public WebElement profileButtonsSection;
 
     @FindBy(xpath = "//div[@class='col-md-2']//a")

@@ -48,7 +48,9 @@ public class BasePageTests extends BasePage {
         driver.findElement(By.xpath("//li[@class = 'list-group-item']")).click();
 
         // TODO - Correct train check - Getting wrong text
-//        String trainId = driver.findElement(By.xpath("//span[@class='bdz-icon-1class']/div//strong")).getText();
+//        String trainId = driver.findElement(By.xpath(
+//                "//div[contains(text(),'Влак')]//ancestor::div[@class='row']//div[contains(@class,'text-ellipsis')]//div//strong"))
+//                .getText();
 //        System.out.println(trainId);
 
         driver.findElement(By.xpath("//div[@class='col-xs-6  col-sm-5 col-md-4']//button[@type='submit']")).click();

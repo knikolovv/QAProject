@@ -3,6 +3,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.OutputType;
+import org.openqa.selenium.Point;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,6 +19,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.Properties;
 import java.util.Random;
+
 
 public class BaseTest  {
     public static Properties p = new Properties();
@@ -40,8 +42,8 @@ public class BaseTest  {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
             wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//            driver.manage().window().setPosition(new Point(-1500,0));
-//            driver.manage().window().maximize();
+            driver.manage().window().setPosition(new Point(-1500,0));
+            driver.manage().window().maximize();
             driver.get(p.getProperty("url"));
 
         }

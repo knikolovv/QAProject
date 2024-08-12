@@ -1,5 +1,6 @@
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPageTests extends BasePage {
@@ -38,7 +39,7 @@ public class LoginPageTests extends BasePage {
 
         //Step - Change phone number
         String randomPhoneNumber = "08" + random.nextInt(10000000,99999999);
-        profileButtonsSection.findElement(By.xpath("//a[@id='profileChangePhone']")).click();
+        driver.findElement(By.id("profileChangePhone")).click();
 
         changePhoneNumberField.clear();
         changePhoneNumberField.sendKeys(randomPhoneNumber);
@@ -48,11 +49,25 @@ public class LoginPageTests extends BasePage {
                 (By.xpath("//div[contains(@class,'profile-row')][5]//div[contains(@class,'text-ellipsis')]")).getText());
 
         wait.until(driver -> profileButtonsSection.isDisplayed());
-        profileButtonsSection.findElement(By.xpath("//a[@id='profileChangeGender']")).click();
-        driver.findElement(By.id("id_new_gender")).click();
-        Thread.sleep(2000);
 
-        //TODO review and refactor every xpath
+        // Step - Change gender
+        String changedGender = "Жена";
+        driver.findElement(By.id("profileChangeGender")).click();
+        driver.findElement(By.id("id_new_gender")).click();
+        driver.findElement(By.xpath("//select[@id='id_new_gender']//option[@value='2']")).click();
+        driver.findElement(By.xpath("//button[contains(@class,'btn-change-gender')]")).click();
+        wait.until(driver -> profileButtonsSection.isDisplayed());
+        verifyText("Gender",changedGender,driver.findElement
+                (By.xpath("//div[contains(@class,'profile-row')][3]//div[contains(@class,'text-ellipsis')]")).getText());
+
+        wait.until(driver -> profileButtonsSection.isDisplayed());
+
+        // Step - Change birthdate
+        driver.findElement(By.id("profileChangeBirthDate")).click();
+        Thread.sleep(1000);
+        changeBirthDateField.sendKeys(Keys.chord(Keys.CONTROL,"a"));
+        changeBirthDateField.sendKeys("01.01.1990");
+//        driver.findElement(By.xpath("//button[@type='submit']")).click();
 
 
     }

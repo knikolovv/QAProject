@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Improved tests and started doing changingProfileInfoTest">
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Code refactoring">
+      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProfilePage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ProfilePageTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SearchPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
@@ -65,7 +69,7 @@
       <recent name="C:\Users\Chris\Desktop\QAProject\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginPageTests.changingProfileInfoTest">
+  <component name="RunManager" selected="JUnit.LoginPageTests.loginTest">
     <configuration name="BasePageTests.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,16 +85,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BasePageTests" />
       <option name="METHOD_NAME" value="headerButtonsTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BasePageTests.ticketReservationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasePageTests" />
-      <option name="METHOD_NAME" value="ticketReservationTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,15 +110,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SearchPageTest.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QAProject" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
+      <option name="METHOD_NAME" value="buyingTicketTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.LoginPageTests.loginTest" />
+        <item itemvalue="JUnit.SearchPageTest.buyingTicketTest" />
+        <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
         <item itemvalue="JUnit.LoginPageTests.changingProfileInfoTest" />
         <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
-        <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
-        <item itemvalue="JUnit.LoginPageTests.loginTest" />
-        <item itemvalue="JUnit.BasePageTests.ticketReservationTest" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SeleniumInternalSettingsState">
+    <option name="lastFrameworkName" value="Selenium" />
+    <option name="lastLanguageId" value="JAVA" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -144,7 +152,9 @@
       <workItem from="1723280389819" duration="16148000" />
       <workItem from="1723399548670" duration="1215000" />
       <workItem from="1723450588984" duration="1931000" />
-      <workItem from="1723452534560" duration="815000" />
+      <workItem from="1723452534560" duration="1078000" />
+      <workItem from="1723826874670" duration="1991000" />
+      <workItem from="1723966707121" duration="13801000" />
     </task>
     <task id="LOCAL-00001" summary="LoginPageTest and BasePageTests created.">
       <created>1723240757795</created>
@@ -174,7 +184,14 @@
       <option name="project" value="LOCAL" />
       <updated>1723308374013</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Code refactoring">
+      <created>1723453581554</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1723453581554</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +213,7 @@
     <MESSAGE value="Updated buyingTicketTest to properly use properties" />
     <MESSAGE value="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest" />
     <MESSAGE value="Improved tests and started doing changingProfileInfoTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Improved tests and started doing changingProfileInfoTest" />
+    <MESSAGE value="Code refactoring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Code refactoring" />
   </component>
 </project>

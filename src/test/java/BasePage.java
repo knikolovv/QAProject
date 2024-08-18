@@ -1,3 +1,4 @@
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -5,64 +6,28 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class BasePage extends BaseTest {
 
-    @FindBy(xpath = "//div[@id='header-controls']//a[@href='/login']")
-    public WebElement loginControlsButton;
-    @FindBy(id = "id-email")
-    public WebElement loginEmailInput;
-    @FindBy(id = "id-password")
-    public WebElement loginPasswordInput;
+    // TODO RETURN IN LOGINPAGE
 
-    @FindBy(xpath = "//div[contains(@class, 'col-md-offset-5 col-md-4')]//button")
-    public WebElement loginButton;
+
+    //TODO ASK navqskude izpolzvam div s id header controls, moga li da go sukratq ?
+    @FindBy(xpath = "//div[@id='header-controls']//a[@href='/login']")
+    public WebElement loginHeaderButton;
 
     @FindBy(xpath = "//div[@id='header-controls']//a[@href='/register']")
-    public WebElement registerControlsButton;
-
-    @FindBy(xpath = "//div[@id='header-controls']//a[@href='/profile']")
-    public WebElement profileButton;
+    public WebElement registerHeaderButton;
 
     @FindBy(xpath = "//div[@id='header-controls']//button[@class='control-language']")
-    public WebElement langControlsButton;
+    public WebElement langHeaderButton;
 
     @FindBy(id = "header-logo")
     public WebElement logo;
 
-    @FindBy(id = "id-search-trips-station-from")
-    public WebElement startStationButton;
+    // TODO ASK Don't know if it should be made in separate class/page
+    @FindBy(xpath = "//div[@id='header-controls']//a[@href='/profile']")
+    public WebElement profileButton;
 
-    @FindBy(id = "react-select-2-input")
-    public WebElement startStationInput;
-
-    @FindBy(className = "css-yk16xz-control")
-    public WebElement endStationButton;
-
-    @FindBy(id = "react-select-3-input")
-    public WebElement endStationInput;
-
-    @FindBy(id = "id-search-trips-going-date")
-    public WebElement currentDateButton;
-
-    @FindBy(xpath = "//div[@class='col-md-2']//button")
-    public WebElement searchButton;
-    @FindBy(xpath = "//input[contains(@class,'form-control passengers-names')]")
-    public WebElement nameField;
-
-    @FindBy(xpath = "//div[@class = 'col-sm-4']//select")
-    public WebElement genderField;
-
-    @FindBy(xpath = "//div[contains(@class,'react-datepicker')]//input")
-    public WebElement dateField;
-
-    @FindBy(xpath = "//div[@class='col-md-7']//input")
-    public WebElement changePhoneNumberField;
-    @FindBy(id = "id_new_birthDate")
-    public WebElement changeBirthDateField;
-
-    @FindBy(className = "col-xs-4")
-    public WebElement profileButtonsSection;
-
-    @FindBy(xpath = "//div[@class='col-md-2']//a")
-    public WebElement cancelProfileChangeButton;
+    @FindBy(xpath = "//div[@id='header-controls']//button[@class='control-exit-profile']")
+    public WebElement logoutButton;
 
     public BasePage() {
         PageFactory.initElements(driver, this);
@@ -70,17 +35,27 @@ public class BasePage extends BaseTest {
 
     public void verifyText(String property, String expectedText, String actualText) {
         assert actualText.equals(expectedText) : "Expected " + property + ": " + expectedText + " but found: " + actualText;
-        System.out.println(property +" is as expected: " + expectedText);
     }
 
-    public void login(String email, String pass) {
-        loginEmailInput.clear();
-        loginEmailInput.sendKeys(email);
-        loginPasswordInput.clear();
-        loginPasswordInput.sendKeys(pass);
+//    public void verifyPageIsOpen() {
+//        wait.until(ExpectedConditions.visibilityOf());
+//    }
 
-        wait.until(ExpectedConditions.elementToBeClickable(loginButton));
-        loginButton.click();
+    public void inputText(WebElement element, String text) {
+        // element.clear() alternative
+        element.sendKeys(Keys.CONTROL + "a");
+        element.sendKeys(Keys.DELETE);
+        element.sendKeys(text);
     }
+
+    public void clickElement(WebElement element) {
+        element.click();
+    }
+
+    public void changeLanguage() {
+        langHeaderButton.click();
+    }
+
+    // TODO RETURN IN LOGINPAGE
 
 }

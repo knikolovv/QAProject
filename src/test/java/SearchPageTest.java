@@ -1,36 +1,31 @@
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-
-import java.time.format.DateTimeFormatter;
 
 //TODO ASK vsqka stranica vrushta druga kato tursq, kak trqbva da kombiniram clasovete i testovete ?
-public class SearchPageTest extends SearchPage {
-    private static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+public class SearchPageTest extends BaseTest {
+
     @Test
     public void buyingTicketTest() {
-
+        SearchPage searchPage = SearchPage.open();
         // Step - Select stations
         String exampleStation = "София";
-        clickElement(startStationButton());
-        enterStartStation(exampleStation);
-        selectStationFromDropdownByIndex(1);
+        searchPage.enterStartStation(exampleStation);
+        searchPage.selectStationFromDropdownByIndex(1);
 
         String exampleStation2 = "Пловдив";
-        clickElement(endStationButton());
-        enterEndStation(exampleStation2);
-        selectStationFromDropdownByIndex(2);
+        searchPage.enterEndStation(exampleStation2);
+        searchPage.selectStationFromDropdownByIndex(2);
 
         // Step - Select going date,check it if it's correct and search
-        clickElement(departureDateField());
-        enterDepartureDate(date.plusDays(1).format(formatter));
+//        clickElement(departureDateField());
+        searchPage.enterDepartureDate(date.plusDays(1).format(SearchPage.formatter));
 
-        verifyText("Date", departureDateField().getAttribute("value"), date.plusDays(1).format(formatter));
-        clickElement(searchButton());
+        searchPage.verifyDepartureDate();
+        searchPage.clickSearchButton();
 
         // Step - Select train and continue
 
-        wait.until(ExpectedConditions.visibilityOf(listOfRides()));
-        selectRideFromListByIndex(1);
+        searchPage.verifyListOfRidesIsVisible();
+        searchPage.selectRideFromListByIndex(1);
 
         // TODO - Correct train check - ting wrong text
 //        String trainId = driver.findElement(By.xpath(
@@ -38,39 +33,38 @@ public class SearchPageTest extends SearchPage {
 //                .Text();
 //        System.out.println(trainId);
 
-        clickElement(continueButton());
+        LoginPage loginPage = searchPage.clickContinueButton();
 
         // Step - Login with correct data
-        login(p.getProperty("email"), p.getProperty("password"));
+        TicketSelectionPage ticketSelectionPage = loginPage.loginToTicketSelectionPage(Props.getEmail(), Props.getPassword());
 
         //Step - Verify passenger info
-        wait.until(driver -> nameField().isDisplayed());
-        String currentName = nameField().getAttribute("value");
-        verifyText("Name",p.getProperty("name"),currentName);
+        ticketSelectionPage.verifyPageIsOpen();
+        String currentName = ticketSelectionPage.getNameFieldText();
+        ticketSelectionPage.verifyText("Name", Props.getName(), currentName);
 
-        String gender = genderField().getAttribute("value");
-        verifyText("Gender",p.getProperty("gender"),gender);
+        String gender = ticketSelectionPage.getGenderFieldText();
+        ticketSelectionPage.verifyText("Gender", Props.getGender(), gender);
 
-        String birthDate = dateField().getAttribute("value");
-        verifyText("Date", p.getProperty("birthDate"), birthDate);
+        String birthDate = ticketSelectionPage.getDateFieldText();
+        ticketSelectionPage.verifyText("Date", Props.getBirthDate(), birthDate);
 
-        String discount = "Без намаление";
-        verifyText("Discount",p.getProperty("discount"), discount);
+        String discount = ticketSelectionPage.getDiscountFieldText();
+        ticketSelectionPage.verifyText("Discount", Props.getDiscount(), discount);
 
-        clickElement(ticketSelectContinueButton());
+        SeatSelectionPage seatSelectionPage = ticketSelectionPage.clickContinueButton();
 
         // Step - choose seat
-        wait.until(ExpectedConditions.urlToBe("https://bileti.bdz.bg/ticket-seats"));
-        clickElement(ticketSeatsContinueButton());
+        seatSelectionPage.verifyPageIsOpen();
+        TicketPreviewPage ticketPreviewPage = seatSelectionPage.clickContinueButton();
 
         // step - choose payment and continue
-        wait.until(ExpectedConditions.urlToBe("https://bileti.bdz.bg/ticket-preview"));
-        clickElement(paymentMethodRadioButton());
-        clickElement(termsAndConditionsCheckbox());
-        clickElement(continueToPaymentButton());
+        ticketPreviewPage.verifyPageIsOpen();
+        ticketPreviewPage.clickPaymentMethodButton();
+        ticketPreviewPage.clickTermsAndConditionsButton();
+        ticketPreviewPage.clickContinueButton();
 
-        wait.until(ExpectedConditions.titleIs("Borica E-Payment"));
-        verifyText("Payment link", "https://3dsgate.borica.bg/cgi-bin/cgi_link", driver.getCurrentUrl());
+        ticketPreviewPage.verifyPaymentPageIsOpened();
     }
 
 

@@ -4,8 +4,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class LoginPage extends BasePage {
 
-    // TODO don't know if it has to be here or in test class
-
     @FindBy(id = "id-email")
     private WebElement loginEmailField;
     @FindBy(id = "id-password")
@@ -17,9 +15,23 @@ public class LoginPage extends BasePage {
     @FindBy(xpath = "//div[@id='header-controls']//button[@class='control-exit-profile']")
     private WebElement logoutButton;
 
+    @FindBy(id = "login-cancel-btn")
+    private WebElement cancelLoginButton;
+
+    @FindBy(className = "register-btn")
+    private WebElement registerButton;
+
+    @FindBy(className = "login-forgotPassword")
+    private WebElement forgotPasswordButton;
+
     public static LoginPage open() {
         driver.get("https://bileti.bdz.bg/login");
         return new LoginPage();
+    }
+
+    @Override
+    public void verifyPageIsOpen() {
+        wait.until(ExpectedConditions.visibilityOf(loginPasswordField));
     }
 
     public void enterEmail(String email) {
@@ -58,8 +70,19 @@ public class LoginPage extends BasePage {
         return new SearchPage();
     }
 
-    @Override
-    public void verifyPageIsOpen() {
-        wait.until(ExpectedConditions.visibilityOf(loginPasswordField));
+    public void cancelLogin() {
+        cancelLoginButton.click();
     }
+
+    public void clickRegisterButton() {
+        registerButton.click();
+        wait.until(ExpectedConditions.urlToBe("https://bileti.bdz.bg/register"));
+    }
+
+    public void clickForgottenPassword() {
+        forgotPasswordButton.click();
+        wait.until(ExpectedConditions.urlToBe("https://bileti.bdz.bg/forgot-password"));
+
+    }
+
 }

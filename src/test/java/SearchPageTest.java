@@ -1,11 +1,11 @@
 import org.junit.jupiter.api.Test;
 
-//TODO ASK vsqka stranica vrushta druga kato tursq, kak trqbva da kombiniram clasovete i testovete ?
 public class SearchPageTest extends BaseTest {
 
     @Test
-    public void buyingTicketTest() {
+    public void buyingTicketTest() throws InterruptedException {
         SearchPage searchPage = SearchPage.open();
+
         // Step - Select stations
         String exampleStation = "София";
         searchPage.enterStartStation(exampleStation);
@@ -16,16 +16,14 @@ public class SearchPageTest extends BaseTest {
         searchPage.selectStationFromDropdownByIndex(2);
 
         // Step - Select going date,check it if it's correct and search
-//        clickElement(departureDateField());
         searchPage.enterDepartureDate(date.plusDays(1).format(SearchPage.formatter));
 
         searchPage.verifyDepartureDate();
         searchPage.clickSearchButton();
 
         // Step - Select train and continue
-
         searchPage.verifyListOfRidesIsVisible();
-        searchPage.selectRideFromListByIndex(1);
+        searchPage.selectRideFromListByIndex(2);
 
         // TODO - Correct train check - ting wrong text
 //        String trainId = driver.findElement(By.xpath(
@@ -44,6 +42,7 @@ public class SearchPageTest extends BaseTest {
         ticketSelectionPage.verifyText("Name", Props.getName(), currentName);
 
         String gender = ticketSelectionPage.getGenderFieldText();
+        Thread.sleep(2000);
         ticketSelectionPage.verifyText("Gender", Props.getGender(), gender);
 
         String birthDate = ticketSelectionPage.getDateFieldText();
@@ -52,13 +51,13 @@ public class SearchPageTest extends BaseTest {
         String discount = ticketSelectionPage.getDiscountFieldText();
         ticketSelectionPage.verifyText("Discount", Props.getDiscount(), discount);
 
-        SeatSelectionPage seatSelectionPage = ticketSelectionPage.clickContinueButton();
 
         // Step - choose seat
+        SeatSelectionPage seatSelectionPage = ticketSelectionPage.clickContinueButton();
         seatSelectionPage.verifyPageIsOpen();
-        TicketPreviewPage ticketPreviewPage = seatSelectionPage.clickContinueButton();
 
         // step - choose payment and continue
+        TicketPreviewPage ticketPreviewPage = seatSelectionPage.clickContinueButton();
         ticketPreviewPage.verifyPageIsOpen();
         ticketPreviewPage.clickPaymentMethodButton();
         ticketPreviewPage.clickTermsAndConditionsButton();

@@ -1,52 +1,51 @@
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.By;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.Random;
 
-public class ProfilePageTests extends ProfilePage {
+public class ProfilePageTests extends BaseTest {
     //TODO finish the test
     public static Random random = new Random();
+
     @Test
-    public void changingProfileInfoTest() throws InterruptedException {
+    public void changingProfileInfoTest() {
         // Step - Sign in profile
-        clickElement(loginHeaderButton);
-        //login(p.getProperty("email"),p.getProperty("password"));
-
-        wait.until(ExpectedConditions.elementToBeClickable(profileButton));
-        clickElement(profileButton);
-
+        ProfilePage profilePage = ProfilePage.open(Props.getEmail(),Props.getPassword());
 
         //Step - Change phone number
-        String randomPhoneNumber = "08" + random.nextInt(10000000,99999999);
-        clickElement(profileChangePhoneButton());
+        ChangePhonePage changePhonePage = profilePage.clickChangePhoneButton();
 
-        enterPhoneNumber(randomPhoneNumber);
-        driver.findElement(By.xpath("//div[contains(@class,'col-md-offset-5')]//button")).click();
-        wait.until(ExpectedConditions.visibilityOf(profileButtonsSection()));
-        verifyText("Phone number", randomPhoneNumber,driver.findElement
-                (By.xpath("//div[contains(@class,'profile-row')][5]//div[contains(@class,'text-ellipsis')]")).getText());
+        String randomPhoneNumber = "08" + random.nextInt(10000000, 99999999);
+        changePhonePage.enterPhoneNumber(randomPhoneNumber);
 
-        wait.until(driver -> profileButtonsSection().isDisplayed());
+        profilePage = changePhonePage.clickChangePhoneButton();
+        profilePage.verifyPageIsOpen();
+        profilePage.verifyPhoneNumberIsChanged(randomPhoneNumber);
 
         // Step - Change gender
         String changedGender = "Жена";
-        driver.findElement(By.id("profileChangeGender")).click();
-        driver.findElement(By.id("id_new_gender")).click();
-        driver.findElement(By.xpath("//select[@id='id_new_gender']//option[@value='2']")).click();
-        driver.findElement(By.xpath("//button[contains(@class,'btn-change-gender')]")).click();
-        wait.until(driver -> profileButtonsSection().isDisplayed());
-        verifyText("Gender",changedGender,driver.findElement
-                (By.xpath("//div[contains(@class,'profile-row')][3]//div[contains(@class,'text-ellipsis')]")).getText());
+        ChangeGenderPage changeGenderPage = profilePage.clickChangeGenderButton();
+        changeGenderPage.openChangeGenderDropdown();
+        changeGenderPage.selectGenderByIndex(3);
 
-        wait.until(driver -> profileButtonsSection().isDisplayed());
+        profilePage = changeGenderPage.clickChangeGenderButton();
+        profilePage.verifyPageIsOpen();
+        profilePage.verifyGenderIsChanged(changedGender);
 
         // Step - Change birthdate
-        driver.findElement(By.id("profileChangeBirthDate")).click();
-        Thread.sleep(1000);
-        enterBirthDateField("01.01.1990");
-//        driver.findElement(By.xpath("//button[@type='submit']")).click();
+        String changedBirthDate = "1.01.1990";
+        ChangeBirthDatePage changeBirthDatePage = profilePage.clickChangeBirthDateButton();
+        changeBirthDatePage.enterBirthDateField(changedBirthDate);
+        changeBirthDatePage.closeDatePicker();
+        profilePage = changeBirthDatePage.clickChangeBirthDateButton();
 
+        profilePage.verifyPageIsOpen();
+        profilePage.verifyBirthDateIsChanged(changedBirthDate);
+
+
+        //TODO Step - Check tickets
 
     }
+
+    // TODO ChangePasswordTEST
+
 }

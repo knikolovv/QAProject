@@ -3,7 +3,6 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,13 +13,11 @@ import java.util.Date;
 
 public class BaseTest {
 
-    public static WebDriver driver;
     public static LocalDateTime date = new Date().toInstant().atZone(ZoneId.systemDefault()).toLocalDateTime();
 
     @BeforeAll
     public static void setUp() {
         BasePage.initDriver();
-
     }
 
     @AfterAll

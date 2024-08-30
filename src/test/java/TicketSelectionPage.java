@@ -1,6 +1,7 @@
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 
 public class TicketSelectionPage extends BasePage {
 
@@ -38,7 +39,8 @@ public class TicketSelectionPage extends BasePage {
     }
 
     public String getDiscountFieldText() {
-        return discountField.getText();
+        Select select = new Select(discountField);
+        return select.getFirstSelectedOption().getText();
     }
 
     public SeatSelectionPage clickContinueButton() {

@@ -12,11 +12,25 @@ public class LoginPageTests extends BaseTest {
         // Step - Login with correct data
         SearchPage searchPage = loginPage.loginToSearchPage(Props.getEmail(), Props.getPassword());
         searchPage.verifyPageIsOpen();
-        ProfilePage profilePage = loginPage.openProfile();
 
+        // Step - verify profilePage opens
+        ProfilePage profilePage = loginPage.openProfile();
         profilePage.verifyPageIsOpen();
+
+        // Step - logout
         searchPage = loginPage.logout();
         searchPage.verifyPageIsOpen();
+    }
+
+    @Test
+    public void loginPageButtonsTest() {
+        LoginPage loginPage = LoginPage.open();
+
+        loginPage.cancelLogin();
+
+        LoginPage.open().clickRegisterButton();
+
+        LoginPage.open().clickForgottenPassword();
     }
 
 }

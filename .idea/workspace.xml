@@ -4,17 +4,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Code refactoring">
-      <change afterPath="$PROJECT_DIR$/src/test/java/LoginPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProfilePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/ProfilePageTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" afterDir="false" />
+    <list default="true" id="bd212c31-5c95-44cd-8bd6-60bac7239242" name="Changes" comment="Updated project structure">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ChangePasswordPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProfileTicketsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/TicketSelectionPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/ProfilePageTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/SearchPageTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/tests/extension/MyExtension.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BasePageTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/bg/bdz/bileti/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BasePageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/BasePageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChangeBirthDatePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ChangeBirthDatePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChangeGenderPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ChangeGenderPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ChangePhonePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ChangePhonePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/LoginPageTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/LoginPageTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProfilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/ProfilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProfilePageTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Props.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/utils/Props.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SearchPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SearchPageTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/SeatSelectionPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/SeatSelectionPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TicketPreviewPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/TicketPreviewPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TicketSelectionPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +75,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
@@ -69,70 +88,80 @@
       <recent name="C:\Users\Chris\Desktop\QAProject\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LoginPageTests.loginTest">
-    <configuration name="BasePageTests.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.ProfilePageTests.checkTicketHistoryTest">
+    <configuration name="ProfilePageTests.checkExistingTicketsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasePageTests" />
-      <option name="METHOD_NAME" value="buyingTicketTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfilePageTests" />
+      <option name="METHOD_NAME" value="checkExistingTicketsTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BasePageTests.headerButtonsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProfilePageTests.checkTicketHistoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BasePageTests" />
-      <option name="METHOD_NAME" value="headerButtonsTest" />
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.ProfilePageTests" />
+      <option name="METHOD_NAME" value="checkTicketHistoryTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTests.changingProfileInfoTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SearchPageTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
-      <option name="METHOD_NAME" value="changingProfileInfoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchPageTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SearchPageTests.simpleBuyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="QAProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests" />
+      <option name="MAIN_CLASS_NAME" value="tests.SearchPageTests" />
+      <option name="METHOD_NAME" value="simpleBuyingTicketTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LoginPageTests.loginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="tests in QAProject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="LoginPageTests" />
-      <option name="METHOD_NAME" value="loginTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SearchPageTest.buyingTicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="QAProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="SearchPageTest" />
-      <option name="METHOD_NAME" value="buyingTicketTest" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="directory" />
+      <dir value="$PROJECT_DIR$/src/test/java/tests" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LoginPageTests.loginTest" />
-        <item itemvalue="JUnit.SearchPageTest.buyingTicketTest" />
-        <item itemvalue="JUnit.BasePageTests.headerButtonsTest" />
-        <item itemvalue="JUnit.LoginPageTests.changingProfileInfoTest" />
-        <item itemvalue="JUnit.BasePageTests.buyingTicketTest" />
+        <item itemvalue="JUnit.ProfilePageTests.checkTicketHistoryTest" />
+        <item itemvalue="JUnit.tests in QAProject" />
+        <item itemvalue="JUnit.SearchPageTests.simpleBuyingTicketTest" />
+        <item itemvalue="JUnit.SearchPageTests" />
+        <item itemvalue="JUnit.ProfilePageTests.checkExistingTicketsTest" />
       </list>
     </recent_temporary>
   </component>
   <component name="SeleniumInternalSettingsState">
     <option name="lastFrameworkName" value="Selenium" />
     <option name="lastLanguageId" value="JAVA" />
+    <option name="lastUrl" value="https://bileti.bdz.bg/" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -154,7 +183,37 @@
       <workItem from="1723450588984" duration="1931000" />
       <workItem from="1723452534560" duration="1078000" />
       <workItem from="1723826874670" duration="1991000" />
-      <workItem from="1723966707121" duration="13801000" />
+      <workItem from="1723966707121" duration="13880000" />
+      <workItem from="1723997371893" duration="610000" />
+      <workItem from="1723998094549" duration="2298000" />
+      <workItem from="1724009730717" duration="344000" />
+      <workItem from="1724010196109" duration="12000" />
+      <workItem from="1724010642589" duration="2853000" />
+      <workItem from="1724145502705" duration="1032000" />
+      <workItem from="1724146549640" duration="173000" />
+      <workItem from="1724146738486" duration="1929000" />
+      <workItem from="1724256984123" duration="18011000" />
+      <workItem from="1724399661955" duration="9450000" />
+      <workItem from="1725009168626" duration="3878000" />
+      <workItem from="1725016073182" duration="246000" />
+      <workItem from="1725016332179" duration="2557000" />
+      <workItem from="1725109862510" duration="1488000" />
+      <workItem from="1725111366702" duration="380000" />
+      <workItem from="1725111758204" duration="7012000" />
+      <workItem from="1725131583097" duration="5627000" />
+      <workItem from="1725139917185" duration="611000" />
+      <workItem from="1725140545591" duration="3021000" />
+      <workItem from="1725177956655" duration="2588000" />
+      <workItem from="1725216382186" duration="1797000" />
+      <workItem from="1725299602988" duration="5902000" />
+      <workItem from="1725430064620" duration="2593000" />
+      <workItem from="1725478188122" duration="1187000" />
+      <workItem from="1725481539722" duration="1987000" />
+      <workItem from="1725486288976" duration="498000" />
+      <workItem from="1725552771594" duration="7772000" />
+      <workItem from="1725606719208" duration="3336000" />
+      <workItem from="1726163125354" duration="2716000" />
+      <workItem from="1730269179026" duration="3737000" />
     </task>
     <task id="LOCAL-00001" summary="LoginPageTest and BasePageTests created.">
       <created>1723240757795</created>
@@ -191,7 +250,49 @@
       <option name="project" value="LOCAL" />
       <updated>1723453581554</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Major refactoring, implementing PO pattern. Lots TODO">
+      <created>1723984740941</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1723984740941</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updated pom.xml">
+      <created>1724012334033</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1724012334033</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Code improvement and refactoring the whole project implementing Page Object Design Pattern">
+      <created>1724279207954</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1724279207954</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Created loginPageButtonsTest and improved changeProfileInfoTest">
+      <created>1725018855692</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1725018855692</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Updated dependencies">
+      <created>1725111097905</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1725111097905</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Updated pom.xml dependencies">
+      <created>1725111137051</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1725111137051</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -214,6 +315,13 @@
     <MESSAGE value="Finished buyingTicketTest, improved loginTest and made changes to headerButtonsTest" />
     <MESSAGE value="Improved tests and started doing changingProfileInfoTest" />
     <MESSAGE value="Code refactoring" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code refactoring" />
+    <MESSAGE value="Major refactoring, implementing PO pattern. Lots TODO" />
+    <MESSAGE value="updated pom.xml" />
+    <MESSAGE value="Code improvement and refactoring the whole project implementing Page Object Design Pattern" />
+    <MESSAGE value="Created loginPageButtonsTest and improved changeProfileInfoTest" />
+    <MESSAGE value="Updated dependencies" />
+    <MESSAGE value="Updated pom.xml dependencies" />
+    <MESSAGE value="Updated project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated project structure" />
   </component>
 </project>

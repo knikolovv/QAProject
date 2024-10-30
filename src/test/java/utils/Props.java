@@ -1,3 +1,5 @@
+package utils;
+
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
@@ -31,17 +33,5 @@ public class Props {
 
     public static String getName() {
         return p.getProperty("name");
-    }
-
-    public static String getGender() {
-        return p.getProperty("gender");
-    }
-
-    public static String getBirthDate() {
-        return p.getProperty("birthDate");
-    }
-
-    public static String getDiscount() {
-        return p.getProperty("discount");
     }
 }

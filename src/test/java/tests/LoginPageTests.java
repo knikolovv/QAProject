@@ -1,12 +1,22 @@
+package tests;
+
+import pages.LoginPage;
+import pages.ProfilePage;
+import pages.SearchPage;
+import io.qameta.allure.Description;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+
+import utils.Props;
 
 public class LoginPageTests extends BaseTest {
 
     @Test
+    @DisplayName("Login Test")
+    @Description("Tests trying to log in with wrong and with correct data")
     public void loginTest() {
         LoginPage loginPage = LoginPage.open();
 
-        // Step - Login with incorrect data
         loginPage.loginExpectingFailure("wrong1@abv.bg", "Wr0ngPass");
 
         // Step - Login with correct data
@@ -23,6 +33,8 @@ public class LoginPageTests extends BaseTest {
     }
 
     @Test
+    @DisplayName("Pages.LoginPage buttons test")
+    @Description("Tests the rest of the login page functionality besides login")
     public void loginPageButtonsTest() {
         LoginPage loginPage = LoginPage.open();
 

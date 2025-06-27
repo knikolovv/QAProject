@@ -50,10 +50,6 @@ public abstract class BasePage {
         driver.quit();
     }
 
-    public void verifyText(String property, String expectedText, String actualText) {
-        assert actualText.equals(expectedText) : "Expected " + property + ": " + expectedText + " but found: " + actualText;
-    }
-
     public void inputText(WebElement element, String text) {
         element.sendKeys(Keys.CONTROL + "a");
         element.sendKeys(Keys.DELETE);

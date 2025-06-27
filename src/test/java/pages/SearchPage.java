@@ -11,6 +11,8 @@ import utils.Props;
 
 import java.time.format.DateTimeFormatter;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class SearchPage extends BasePage {
 
     public static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
@@ -97,7 +99,7 @@ public class SearchPage extends BasePage {
 
     @Step("Verify departure date")
     public void verifyDepartureDate() {
-        verifyText("Date", departureDateField.getAttribute("value"), BaseTest.date.plusDays(3).format(formatter));
+        assertThat(departureDateField.getAttribute("value")).isEqualTo(BaseTest.date.plusDays(3).format(formatter));
     }
 
     @Step("Verify list of rides is visible")

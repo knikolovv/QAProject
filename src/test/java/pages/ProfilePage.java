@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
+import static org.assertj.core.api.Assertions.assertThat;
+
 public class ProfilePage extends BasePage {
     @FindBy(id = "profileChangePhone")
     private WebElement profileChangePhoneButton;
@@ -53,7 +55,7 @@ public class ProfilePage extends BasePage {
 
     @Step("Verifies the phone number is as expected")
     public void verifyPhoneNumberIsChanged(String changedNumber) {
-        verifyText("Phone Number",changedNumber,phoneNumber.getText());
+        assertThat(phoneNumber.getText()).isEqualTo(changedNumber);
     }
 
     @Step("Click the change gender button, which sends the user to the change gender page")
@@ -64,7 +66,7 @@ public class ProfilePage extends BasePage {
 
     @Step("Verifies the gender is changed successfully")
     public void verifyGenderIsChanged(String changedGender) {
-        verifyText("Gender",changedGender,gender.getText());
+        assertThat(gender.getText()).isEqualTo(changedGender);
     }
 
     @Step("Click the change birth date button, which sends the user to the change birthdate page ")
@@ -75,7 +77,7 @@ public class ProfilePage extends BasePage {
 
     @Step("Verifies the birthdate is changed")
     public void verifyBirthDateIsChanged(String changedBirthDate) {
-        verifyText("BirthDate",changedBirthDate,birthDate.getText());
+        assertThat(birthDate.getText()).isEqualTo(changedBirthDate);
     }
 
     public String getCurrentGender() {
@@ -85,5 +87,10 @@ public class ProfilePage extends BasePage {
     public ProfileTicketsPage clickTicketsButton() {
         ticketsButton.click();
         return new ProfileTicketsPage();
+    }
+
+    public ChangePasswordPage clickChangePasswordProfileButton() {
+        changePasswordButton.click();
+        return new ChangePasswordPage();
     }
 }

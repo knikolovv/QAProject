@@ -101,4 +101,10 @@ public class LoginPage extends BasePage {
 
     }
 
+    public ProfilePage loginToProfilePage(String email, String newPassword) {
+        login(email, newPassword);
+        SearchPage searchPage = new SearchPage();
+        searchPage.openProfile();
+        return new ProfilePage();
+    }
 }

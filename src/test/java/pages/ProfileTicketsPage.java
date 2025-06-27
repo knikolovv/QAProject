@@ -7,15 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class ProfileTicketsPage extends BasePage{
-
-    @FindBy(xpath = "//ul[@class='list-group select-trips-going']")
-    private WebElement listOfTickets;
-
     @FindBy(xpath = "//div[contains(@class,'btn-group-custom-tickets')]//button")
     private WebElement refreshButton;
-
-    @FindBy(xpath = "//*[@class='list-group-item']")
-    private WebElement ticket;
 
     @FindBy(id = "loader_modal")
     private WebElement loader;

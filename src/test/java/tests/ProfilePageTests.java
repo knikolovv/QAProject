@@ -6,6 +6,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.Random;
+
 import utils.Props;
 
 public class ProfilePageTests extends BaseTest {
@@ -73,42 +74,52 @@ public class ProfilePageTests extends BaseTest {
 
     }
 
-    // TODO ChangePasswordTEST
+    @Test
+    @DisplayName("Change Password")
+    @Description("Checking fields responsibility and their error messages")
+    public void changePasswordTest() {
+        ProfilePage profilePage = ProfilePage.open(utils.Props.getEmail(), utils.Props.getPassword());
 
-//    @Test
-//    public void changePasswordTest() {
-//        Pages.ProfilePage profilePage = Pages.ProfilePage.open(utils.Props.getEmail(),utils.Props.getPassword());
-//
-//        Pages.ChangePasswordPage changePasswordPage = profilePage.clickChangePasswordProfileButton();
-//
-//        changePasswordPage.clickChangePasswordButton();
-//        changePasswordPage.verifyBaseErrorMessagesAppear();
-//        changePasswordPage.verifyPasswordHints();
-//
-//        changePasswordPage.enterSameNewAndOldPassword();
-//        changePasswordPage.clickChangePasswordButton();
-//        changePasswordPage.verifyPasswordsMustBeDifferentErrorMessage();
-//
-//        changePasswordPage.enterWrongCurrentPassword();
-//        changePasswordPage.clickChangePasswordButton();
-//        changePasswordPage.verifyWrongCurrentPasswordErrorMessage();
-//
-//        changePasswordPage.enterDifferentNewAndRepeatedPassword();
-//        changePasswordPage.verifyPasswordMustMatchErrorMessage();
-//
-//        changePasswordPage.enterValidCurrentPassword();
-//        changePasswordPage.clickChangePasswordButton();
-//        changePasswordPage.verifyPasswordHintsAppear();
-//
-//        String newPassword = "N3wPass!";
-//
-//        changePasswordPage.enterAllValidPassword(newPassword,newPassword);
-//        // Returns login page object
-//        changePasswordPage.clickChangePasswordButton();
-//
-//        // TODO
-//
-//
-//    }
+        ChangePasswordPage changePasswordPage = profilePage.clickChangePasswordProfileButton();
+
+        profilePage = changePasswordPage.clickCancelButton();
+
+        changePasswordPage = profilePage.clickChangePasswordProfileButton();
+
+        changePasswordPage.clickChangePasswordButtonWithWronglyPopulatedFields();
+        changePasswordPage.verifyBaseErrorMessagesAppear();
+
+        changePasswordPage.enterWrongCurrentPassword();
+        changePasswordPage.clickChangePasswordButtonWithWronglyPopulatedFields();
+        // verifies newPasswordFieldMessage
+        changePasswordPage.verifyFieldIsMandatoryErrorMessage();
+
+        changePasswordPage.enterSameNewAndOldPassword();
+        changePasswordPage.clickChangePasswordButtonWithWronglyPopulatedFields();
+        changePasswordPage.verifyPasswordsMustBeDifferentErrorMessage();
+
+        changePasswordPage.enterDifferentNewAndRepeatedPassword();
+        changePasswordPage.verifyPasswordMustMatchErrorMessage();
+
+        changePasswordPage.enterWrongCurrentPassword();
+        changePasswordPage.enterSameNewAndRepeatPassword();
+        changePasswordPage.clickChangePasswordButtonWithWronglyPopulatedFields();
+        changePasswordPage.verifyWrongCurrentPasswordErrorMessage();
+
+        String newPassword = "N3wPass!";
+        String currentPassword = Props.getPassword();
+
+        changePasswordPage.enterAllValidPassword(currentPassword,newPassword);
+
+        // Returns login page object
+        LoginPage loginPage = changePasswordPage.clickChangePasswordButtonWithAllPasswordsCorrect();
+
+        // Return old password to be the current one
+        profilePage = loginPage.loginToProfilePage(Props.getEmail(),newPassword);
+
+        changePasswordPage = profilePage.clickChangePasswordProfileButton();
+        changePasswordPage.enterAllValidPassword(newPassword,currentPassword);
+        changePasswordPage.clickChangePasswordButtonWithAllPasswordsCorrect();
+    }
 
 }
